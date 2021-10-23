@@ -1,14 +1,12 @@
-lst=gets.chomp.split()
+lst=gets.chomp.split(" ")
 n=lst[0].to_i
 x=lst[1].to_i
 cnt=0
-llst=[]
-for i in (1..n)
-  llst.append(gets.chomp.to_i)
- end
-for j in llst
-  if j%x==0
+until n==0 
+  t=gets.chomp.to_i
+  if t.modulo(x)==0 
       cnt+=1
-  end
+  end 
+  n-=1 
 end
-puts cnt
+print(cnt)
